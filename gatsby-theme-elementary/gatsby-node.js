@@ -23,11 +23,8 @@ exports.onPreBootstrap = ({ reporter, store }, themeOptions) => {
 };
 
 exports.createPages = ({ actions, reporter }) => {
-  reporter.info("make sure to load data from somewhere!");
-
-  // TODO replace this with data from somewhere
   actions.createPage({
-    path: "/",
+    path: basePath,
     component: require.resolve("./src/templates/home.js")
   });
 };
