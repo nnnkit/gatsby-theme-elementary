@@ -3,10 +3,14 @@ import { jsx } from "theme-ui";
 
 export default function Home() {
   return (
-    <h1
-      sx={{ fontFamily: "body", backgroundColor: "background", color: "text" }}
-    >
-      Hello Home!
-    </h1>
+    <div>
+      <div>Recent Posts</div>
+      <ul>
+        <li>
+          <time>July 19, 2017</time>
+          <a href="#">Learning React Hooks With Example</a>
+        </li>
+      </ul>
+    </div>
   );
 }

@@ -1,5 +1,12 @@
+let basePath;
+
+exports.onPreBootstrap = ({ reporter }, themeOptions) => {
+  basePath = themeOptions.basePath || "/";
+  console.log(basePath);
+};
+
 exports.createPages = ({ actions, reporter }) => {
-  reporter.warn("make sure to load data from somewhere!");
+  reporter.info("make sure to load data from somewhere!");
 
   // TODO replace this with data from somewhere
   actions.createPage({

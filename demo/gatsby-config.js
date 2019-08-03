@@ -1,3 +1,10 @@
 module.exports = {
-  plugins: ["gatsby-theme-elementary"]
+  plugins: [
+    {
+      resolve: "gatsby-theme-elementary",
+      options: {
+        basePath: "/main"
+      }
+    }
+  ]
 };
