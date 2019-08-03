@@ -1,0 +1,16 @@
+{
+  "name": "elementary",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "repository": "https://github.com/nnnkit/gatsby-theme-elementary.git",
+  "author": "Ankit <iankit17@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "yarn workspace demo develop"
+  },
+  "workspaces": [
+    "gatsby-theme-elementary",
+    "demo"
+  ]
+}
