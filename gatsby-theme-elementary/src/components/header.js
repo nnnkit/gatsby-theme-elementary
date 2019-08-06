@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Header } from "theme-ui";
+import { jsx, Header, useColorMode } from "theme-ui";
 
 import React from "react";
 import { Link } from "gatsby";
@@ -14,12 +14,12 @@ const MoonIcon = ({ isDark, handleClick }) => (
       height: "24px",
       position: "relative",
       boxShadow: isDark
-        ? "inset 9px -9px 0 0 #000"
+        ? "inset 9px -9px 0 0 #fff"
         : "inset 32px -32px 0 0 #fff",
       transform: isDark ? "scale(1) rotate(-2deg)" : "scale(.5) rotate(0deg)",
       transition: isDark
-        ? "box-shadow .5s ease 0s, transform .4s ease .1s"
-        : "transform .3s ease .1s, box-shadow .2s ease 0s",
+        ? "box-shadow 300ms ease 0s, transform 1000ms ease 300ms"
+        : "transform 300ms ease 0s, box-shadow 300ms ease 300ms",
       "&:before": {
         content: '""',
         width: "inherit",
@@ -29,7 +29,7 @@ const MoonIcon = ({ isDark, handleClick }) => (
         left: 0,
         top: 0,
         background: isDark ? "" : "#5628EE",
-        transition: isDark ? "background .3s ease" : "background .3s ease .1s"
+        transition: isDark ? "background 1s ease" : "background 1s ease 0s"
       },
       "&:after": {
         content: '""',
@@ -50,15 +50,15 @@ const MoonIcon = ({ isDark, handleClick }) => (
 );
 
 export default function header() {
-  const [mode, setMode] = React.useState(true);
+  const [colorMode, setColorMode] = useColorMode();
   function hey() {
-    setMode(!mode);
+    setColorMode(colorMode === "light" ? "dark" : "light");
   }
   return (
     <Header>
       <div>Hello</div>
       <div>
-        <MoonIcon isDark={mode} handleClick={hey} />
+        <MoonIcon isDark={colorMode === "dark"} handleClick={hey} />
       </div>
     </Header>
   );
