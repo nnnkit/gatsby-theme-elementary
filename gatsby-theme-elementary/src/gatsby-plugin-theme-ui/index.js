@@ -23,14 +23,17 @@ export default {
   },
   initialColorMode: "light",
   colors: {
-    text: "#6a6f75",
-    background: "#eff1f3",
+    text: "#000",
+    background: "#fff",
     modes: {
       dark: {
         text: "#fff",
         background: "#000"
       }
     }
+  },
+  sizes: {
+    container: 800
   },
   styles
 };
