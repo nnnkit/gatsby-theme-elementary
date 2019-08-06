@@ -1,9 +1,7 @@
 /** @jsx jsx */
 import { jsx, Header, useColorMode } from "theme-ui";
 
-import React from "react";
-import { Link } from "gatsby";
-import { css, Styled } from "theme-ui";
+import { Styled } from "theme-ui";
 
 const MoonIcon = ({ isDark, handleClick }) => (
   <Styled.div
